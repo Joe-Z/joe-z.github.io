@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+   <title>Franz J. Lanzendorfer &#124; {{ page.title }}</title>
+   <meta name="author" content="Franz J. Lanzendorfer">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <link rel="shortcut icon" href="/style/favicon.gif" type="image/gif" />
+   <link rel="icon" href="/style/favicon.gif" type="image/gif" />
+   <meta name="robots" content="index,follow"/>
+   <meta name="mssmarttagspreventparsing" content="true"/>
+   <meta name="keywords" content="franz lanzendorfer, programmer, fh salzburg, university of applied sciences, augmented reality, games, c++, c#, austria">
+   <meta name="description" content="Portfolio of Franz J. Lanzendorfer. Programmer from Salzburg, Austria, studying MultiMediaTechnology at the Salzburg University of Applied Sciences."/>
+  	
+   <meta name="dc.title" content="Portfolio Franz J. Lanzendorfer"/>
+   
+   <link rel="stylesheet" href="/style/reset.css" type="text/css" />
+   <link rel="stylesheet" href="/style/screen.css" type="text/css" />
+   <link rel="stylesheet" href="/style/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+   
+   <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+   <script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+   <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+
+   <link href='http://fonts.googleapis.com/css?family=Ubuntu:regular' rel='stylesheet' type='text/css'>
+</head>
+<body>
+      <a href="http://github.com/Joe-Z"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<div id="main">
+	<header>
+		<h1><a href="{{ site.url }}/index.html"><span id="header">Portfolio <span id="backslash">\\</span><span id="slash">//</span> Franz J. Lanzendorfer</span></a></h1>
+	</header>
+	
+	<div class="floatClear"></div>
+	
+	<div id = "previews">
+		<!-- preview-list -->
+		{% for post in site.posts reversed %}
+			<li>
+				<a href="{{ post.url }}">
+				  <!-- highlighting the current project -->
+				  {% if post.title == page.title %}
+				    <div class="highlightPreview">
+				  {% else %}
+					<div class="normalPreview">
+				  {% endif %}
+						<img src="{{post.previewImageUrl}}" alt="{{post.title}}" />
+						<h3>{{post.title}}</h3>
+						<h4>{{post.language}}</h4>
+					</div>
+				</a>
+			</li>
+	    {% endfor %}
+	</div>
+	
+	<div class="floatClear"></div>
+	
+	<div id = "postContent">
+		{{ content }}
+	</div>
+	
+	<div id="footer">
+		<h3>&copy; 2012 Franz J. Lanzendorfer. This portfolio was created using <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a></h3>
+	</div>
+
+</div>
+	<script type="text/javascript" src="/js/myFunctions.js"></script>
+</body>
+</html>

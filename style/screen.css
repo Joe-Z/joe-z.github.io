@@ -1,0 +1,268 @@
+
+/*main*/
+
+body {
+	height: 100%;
+	width: 100%;
+/*  min-width: 1000px;*/
+	background-image: url(stripe_bg.png);
+	font-family: Arial, sans-serif;
+	color: #c6c6c6;
+}
+
+h1, h2 {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-size: 30px;
+	color: #63b3d5;
+}
+
+h3 {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#footer h3 {
+	font-size: 14px;
+}
+
+/*h4 is just intended for the language underneath each project*/
+h4 {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	
+	font-size: 12px;
+	font-weight: normal;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+#postVideo p {
+	font-size: 12px;
+}
+
+#main {
+  width: 870px;
+  margin: 20px auto 0 auto;
+  padding-bottom: 20px;
+}
+
+#header {
+	color: #c6c6c6;
+}
+
+#header:hover {
+	color: #63b3d5;
+}
+
+#header:hover  #slash{
+	display: none;
+}
+
+#header:hover  #backslash{
+	display: inline;
+	color: #c6c6c6;
+}
+
+#backslash {
+	display: none;
+	color: #63b3d5;
+}
+
+#slash {
+	display: inline;
+	color: #63b3d5;
+}
+
+#index {
+	padding: 0;
+}
+
+#indexText {
+	float: left;
+	width: 400px;
+}
+
+#gravatar {
+	float: left;
+	margin: 20px 0 0 100px;
+}
+
+#previews {
+	margin-top: 20px;
+}
+
+#previews li {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 150px;
+	height: 200px;
+	list-style-type: none;
+}
+
+#previews a:hover {
+	text-decoration: none;
+}
+
+.normalPreview {
+	overflow: hidden;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+
+.normalPreview img {
+	margin: 0 auto;
+}
+
+.highlightPreview {
+	overflow: hidden;
+	color: #FFF;
+	opacity: 1.0;
+	filter:alpha(opacity=100);
+}
+
+#footer {
+	margin-top: 10px;
+}
+
+.contact {
+	margin-top: 15px;
+}
+
+.floatClear {
+  clear: both;
+}
+
+/*post*/
+
+#postContent {
+	border-top: 1px dashed black;
+	border-bottom: 1px dashed black;
+	padding-bottom: 20px;
+}
+
+#postContent p {
+	margin-top: 10px;
+}
+
+#postContent  ul {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+#postContent ul li {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+#postTitle {
+	/*normally the margin-top would be 20px, but to
+    make it look right (due to <h1>)
+	I had to take less here*/
+	margin-top: 15px;
+}
+
+#postText {
+	float: left;
+	padding-top: 5px;
+	width: 390px;
+	margin-right: 20px;
+}
+
+#postMedia {
+	margin: 20px 40px 0 0;
+	float: left;
+	width: 400px;
+}
+
+#postMedia img {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+
+.additional {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin: 20px 20px 0 0;
+	overflow: hidden;
+}
+
+.additional img {
+	width: 150px;
+	height: 150px;
+}
+
+#postContent h2 {
+	/*normally the margin-top would be 20px, but to
+    make it look right (due to <h1>)
+	I had to take less here*/
+	margin-top: 15px;
+}
+
+#more {
+	display: block;
+}
+
+#less {
+	display: block;
+}
+
+#less, #more {
+	margin-top: 10px;
+	color: #FFF;
+	font-size: 14px;
+}
+
+#moreInfo {
+	display: block;
+	overflow: hidden;
+}
+
+#less:hover, #more:hover {
+	text-decoration: none;
+	color: #63b3d5;
+}
+
+#facts {
+	margin: 0;
+}
+
+#facts h1 {
+	margin-top: 20px;
+}
+
+#source {
+	margin-top: 20px;
+}
+
+#executable {
+	margin-top: 20px;
+}
+
+/* link-formatting */
+
+a:link {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #63b3d5;
+}

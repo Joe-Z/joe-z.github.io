@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<div id="postMedia">
+	<!-- if we have a video we want it to be shown in #postMedia
+	in case there are images too we display them in the #additionalMedia-div -->
+	{% if page.Video %}
+		{{ page.Video }}
+	{% elsif page.imageUrls %}
+		{% for imageUrl in page.imageUrls %}
+		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{imageUrl}}">
+			<img src="{{ imageUrl }}" alt="{{ page.title }}" />
+		  </a>
+		{% endfor %}
+	{% endif %}
+</div>
+
+<h2 id="postTitle">{{ page.title }}</h2>
+
+<div id="postText">
+	{{ content }}
+</div>
+
+<div class="floatClear"></div>
+
+{% if page.Video and page.imageUrls %}
+	<div id="additionalMedia">
+	{% for imageUrl in page.imageUrls %}
+		<div class="additional">
+		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{ imageUrl }}" >
+			<img src="{{imageUrl}}" alt="{{ page.title }}" />
+		  </a>
+		</div>
+	{% endfor %}
+	</div>
+{% endif %}
+
+<div class="floatClear"></div>
+
+<!-- this if is just to ensure that there's at least one fact (jekyll-version)-->
+{% if page.language %}
+	<div id="facts">
+		<h1>Facts:</h1>
+		<ul>
+			{% if page.language %}
+			<li>Language: {{page.language}}</li>
+			{% endif %}
+			{% if page.framework %}
+			<li>Framework: {{page.framework}}</li>
+			{% endif %}
+			{% if page.miscFact %}
+			<li>Miscellaneous: {{page.miscFact}}</li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}
+
+{% if page.source %}
+<div id="source">
+	<h3><a href="{{page.source}}" target="_blank">Source-Code on {{page.sourceLocation}}</a></h3>
+</div>
+{% endif %}
+
+{% if page.executable %}
+<div id="executable">
+	<h3><a href="{{page.executable}}">Download</a></h3>
+</div>
+{% endif %}

@@ -1,0 +1,54 @@
+---
+layout: post
+title: Stealth Granny
+language: C#
+framework: .NET / XNA 4.0
+
+Video: <iframe src="http://player.vimeo.com/video/21072496" width="400" height="300" frameborder="0"></iframe><p><a href="http://vimeo.com/21072496">"Stealth Granny" Map-Editor</a> from <a href="http://vimeo.com/user3874276">Joe Z</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+previewImageUrl: /images/stealth_granny/granny_preview.png
+
+source: https://www.assembla.com/code/stealthgranny/subversion/nodes
+sourceLocation: assembla
+
+---
+<p>
+	Stealth Granny is an isometric Stealth-Game. The player is controlling
+	an elderly woman who tries to escape a retirement home and has to make her way
+	past the guards.
+</p>
+<p>
+	We wanted to write our own map-editor. Unfortunately we ended up investing the 
+	most part of development time in the editor. But the result was a quite 
+	powerful isometric map-editor, which we used to build our levels with.
+</p>
+<p>
+	I developed this project with two fello students of mine:
+	<ul>
+		<li><a href="http://ryambaco.multimediatechnology.at/">Christian Mayr</a> and</li>
+		<li><a href="http://benjy.multimediatechnology.at/">Benjamin Medicke</a></li>
+	</ul>
+</p>
+
+<span id = "more">more</span>
+<div id = "moreInfo" style="display: none;">
+	<p>
+		Several interesting challenges occured in this project. One was a sight-detection
+		for our enemies (quite important in a stealth-game!).
+		We realised this with a
+		<a href="http://en.wikipedia.org/wiki/Bresenham's_line_algorithm">Bresenham</a>-algorithm
+		implementation, mapped to our iso-coordinates.
+	</p>
+	<p>
+		The isometric perspective was another challenge, since none of us had ever worked on an isometric
+		game before.
+	</p>
+	<p>
+		Another pretty cool feature is the A.I. of our enemies.
+		It's realised with a state-pattern, so every enemy can act individually
+		according to its current state.
+		For enemy-movement we also implemented an
+		<a href="http://en.wikipedia.org/wiki/A_star">A*</a>-algorithm for pathfinding.
+	</p>
+	<span id="less">less</span>
+</div>

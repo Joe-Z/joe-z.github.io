@@ -1,0 +1,4 @@
+markdown: rdiscount
+pygments: true
+server: true
+permalink: /:year/:title.html
