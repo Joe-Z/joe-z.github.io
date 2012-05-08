@@ -11,13 +11,13 @@ $("#more").hover(function() { document.body.style.cursor = 'pointer'; },
 $("#less").hover(function() { document.body.style.cursor = 'pointer'; },
 				 function() { document.body.style.cursor = 'default'; });
 				 
-$(".normalPreview").hover(function(){$(this).stop(true, false);
+$(".normalPreview img").hover(function(){$(this).stop(true, false);
 									$(this).animate({
 											opacity: 1.0
 											}, 400);
 									},
 						  function(){$(this).animate({
-											opacity: 0.5
+											opacity: 0.7
 											}, 200);
 									});
 $("#more").click(function(){

@@ -5,15 +5,15 @@ body {
 	height: 100%;
 	width: 100%;
 /*  min-width: 1000px;*/
-	background-image: url(stripe_bg.png);
+	background-image: url(scratches.png);
 	font-family: Arial, sans-serif;
-	color: #c6c6c6;
 }
 
 h1, h2 {
 	font-family: 'Ubuntu', Arial, sans-serif;
 	font-size: 30px;
-	color: #63b3d5;
+	/*color: #3fa8d3;*/
+	color: #343434;
 }
 
 h3 {
@@ -50,11 +50,11 @@ p {
 }
 
 #header {
-	color: #c6c6c6;
+	color: #343434;
 }
 
 #header:hover {
-	color: #63b3d5;
+	color: #329fcc;
 }
 
 #header:hover  #slash{
@@ -63,17 +63,16 @@ p {
 
 #header:hover  #backslash{
 	display: inline;
-	color: #c6c6c6;
+	color: #343434;
 }
 
 #backslash {
 	display: none;
-	color: #63b3d5;
 }
 
 #slash {
 	display: inline;
-	color: #63b3d5;
+	color: #329fcc;
 }
 
 #index {
@@ -108,19 +107,19 @@ p {
 
 .normalPreview {
 	overflow: hidden;
-	opacity: 0.5;
-	filter:alpha(opacity=50);
 }
 
 .normalPreview img {
 	margin: 0 auto;
+	opacity: 0.7;
+	filter:alpha(opacity=70);
 }
 
 .highlightPreview {
 	overflow: hidden;
-	color: #FFF;
-	opacity: 1.0;
-	filter:alpha(opacity=100);
+	color: #6ac2e6;
+	/*opacity: 1.0;
+	filter:alpha(opacity=100);*/
 }
 
 #footer {
@@ -215,7 +214,7 @@ p {
 
 #less, #more {
 	margin-top: 10px;
-	color: #FFF;
+	color: #329fcc;
 	font-size: 14px;
 }
 
@@ -226,7 +225,7 @@ p {
 
 #less:hover, #more:hover {
 	text-decoration: none;
-	color: #63b3d5;
+	color: #6ac2e6;
 }
 
 #facts {
@@ -249,20 +248,20 @@ p {
 
 a:link {
 	text-decoration: none;
-	color: #FFF;
+	color: #329fcc;
 }
 
 a:active {
 	text-decoration: none;
-	color: #FFF;
+	color: #329fcc;
 }
 
 a:visited {
 	text-decoration: none;
-	color: #FFF;
+	color: #329fcc;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #63b3d5;
+	color: #6ac2e6;
 }
