@@ -40,13 +40,6 @@ layout: default
 		  </a>
 		</div>
 	{% endfor %}
-	{% elsif page.extImages %}
-		{% for extImageUrl in page.extImages %}
-		  <a href="{{extImageUrl}}">
-			<img src="{{ extImageUrl }}" alt="{{ page.title }}" />
-		  </a>
-		{% endfor %}
-	{% endif %}
 	</div>
 {% endif %}
 
