@@ -9,7 +9,7 @@ layout: default
 		{{ page.Video }}
 	{% elsif page.imageUrls %}
 		{% for imageUrl in page.imageUrls %}
-		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{imageUrl}}">
+		  <a class="fancy" href="{{imageUrl}}">
 			<img src="{{ imageUrl }}" alt="{{ page.title }}" />
 		  </a>
 		{% endfor %}
