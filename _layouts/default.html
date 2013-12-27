@@ -49,21 +49,59 @@
 	
 	<div id = "previews">
 		<!-- preview-list -->
-		{% for post in site.posts %}
-			<li>
-				<a href="{{ post.url }}">
+
+		{% for post in site.posts  %}
+		    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+		    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+		    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+		    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+
+		    {% if forloop.first %}
+		    <li>
 				  <!-- highlighting the current project -->
-				  {% if post.title == page.title %}
-				    <div class="highlightPreview">
-				  {% else %}
-					<div class="normalPreview">
-				  {% endif %}
-						<img src="{{post.previewImageUrl}}" alt="{{post.title}}" />
-						<h3>{{post.title}}</h3>
-						<h4>{{post.language}}</h4>
-					</div>
-				</a>
+			    <div class="highlightPreview">
+				<div class="normalPreview">
+					<img src="http://whitsblog.com/wp-content/uploads/2011/10/lolcat_what1.jpg" alt="duuude" />
+					<h3>Nothing to see here</h3>
+					<h4>Human</h4>
+				</div>
 			</li>
+		    {% endif %}
+
+		    {% if forloop.last %}
+		    {% else %}
+		        {% if this_year != next_year %}
+				<li>
+					  <!-- highlighting the current project -->
+				    <div class="highlightPreview">
+					<div class="normalPreview">
+						<img src="http://whitsblog.com/wp-content/uploads/2011/10/lolcat_what1.jpg" alt="duuude" />
+						<h3>Lolcat</h3>
+						<h4>Cat</h4>
+					</div>
+				</li>
+		        {% else %}    
+		            {% if this_month != next_month %}
+		            <li>
+						<a href="{{ post.url }}">
+						  <!-- highlighting the current project -->
+						  {% if post.title == page.title %}
+						    <div class="highlightPreview">
+						  {% else %}
+							<div class="normalPreview">
+						  {% endif %}
+								<img src="{{post.previewImageUrl}}" alt="{{post.title}}" />
+								<h3>{{post.title}}</h3>
+								<h4>{{post.language}}</h4>
+							</div>
+						</a>
+					</li>
+		            {% endif %}
+		        {% endif %}
+		    {% endif %}
+		{% endfor %}
+		{% for post in site.posts %}
+			
 	    {% endfor %}
 	</div>
 	
