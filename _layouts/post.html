@@ -3,13 +3,13 @@ layout: default
 ---
 
 <div id="postMedia">
-	<!-- if we have a video we want it to be shown in #postMedia
-	in case there are images too we display them in the #additionalMedia-div -->
+	<!--if we have a video we want it to be shown directly next to the post text.
+		if there are images too we display them below the post text -->
 	{% if page.Video %}
 		{{ page.Video }}
 	{% elsif page.imageUrls %}
 		{% for imageUrl in page.imageUrls %}
-		  <a class="fancy" href="{{imageUrl}}">
+		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{imageUrl}}">
 			<img src="{{ imageUrl }}" alt="{{ page.title }}" />
 		  </a>
 		{% endfor %}
@@ -24,6 +24,7 @@ layout: default
 
 <div class="floatClear"></div>
 
+<!-- show images (aka 'additionalMedia') below the post when there's a video too -->
 {% if page.Video and page.imageUrls %}
 	<div id="additionalMedia">
 	{% for imageUrl in page.imageUrls %}
