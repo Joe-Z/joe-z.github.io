@@ -13,6 +13,12 @@ layout: default
 			<img src="{{ imageUrl }}" alt="{{ page.title }}" />
 		  </a>
 		{% endfor %}
+	{% elsif page.extImageUrls %}
+		{% for extImageUrl in page.extImageUrls %}
+		  <a href="{{extImageUrl}}">
+			<img src="{{ extImageUrl }}" alt="{{ page.title }}" />
+		  </a>
+		{% endfor %}
 	{% endif %}
 </div>
 
