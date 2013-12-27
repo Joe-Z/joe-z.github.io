@@ -9,12 +9,12 @@ layout: default
 		{{ page.Video }}
 	{% elsif page.imageUrls %}
 		{% for imageUrl in page.imageUrls %}
-		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{imageUrl}}">
+		  <a class="fancy" href="{{imageUrl}}">
 			<img src="{{ imageUrl }}" alt="{{ page.title }}" />
 		  </a>
 		{% endfor %}
-	{% elsif page.extImageUrls %}
-		{% for extImageUrl in page.extImageUrls %}
+	{% elsif page.extImages %}
+		{% for extImageUrl in page.extImages %}
 		  <a href="{{extImageUrl}}">
 			<img src="{{ extImageUrl }}" alt="{{ page.title }}" />
 		  </a>
@@ -35,11 +35,18 @@ layout: default
 	<div id="additionalMedia">
 	{% for imageUrl in page.imageUrls %}
 		<div class="additional">
-		  <a rel = "{{ page.title | replace:' ', '_' }}" class="fancy" href="{{ imageUrl }}" >
+		  <a class="fancy" href="{{ imageUrl }}" >
 			<img src="{{imageUrl}}" alt="{{ page.title }}" />
 		  </a>
 		</div>
 	{% endfor %}
+	{% elsif page.extImages %}
+		{% for extImageUrl in page.extImages %}
+		  <a href="{{extImageUrl}}">
+			<img src="{{ extImageUrl }}" alt="{{ page.title }}" />
+		  </a>
+		{% endfor %}
+	{% endif %}
 	</div>
 {% endif %}
 
