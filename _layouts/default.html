@@ -42,34 +42,12 @@
 <body>
 <div id="main">
 	<header>
-		<h1><a href="{{ site.url }}/index.html"><span id="header"><span id="backslash">\\</span><span id="slash">//</span>flanzendorfer</span></a></h1>
+		<h1>
+			<a href="{{ site.url }}/index.html"><span id="header">Projects</span></a>
+			<span id="slash"> // </span>
+			<a href="{{ site.url }}/about.html"><span id="header">About</span></a>
+		</h1>
 	</header>
-	
-	<div class="floatClear"></div>
-	
-	<div id = "previews">
-		<!-- preview-list -->
-		<ul>
-		{% for post in site.posts %}
-		    <li>
-				<a href="{{ post.url }}">
-				  
-				  {% if post.title == page.title %}
-				    <div class="highlightPreview">
-				  {% else %}
-					<div class="normalPreview">
-				  {% endif %}
-						<img src="{{post.previewImageUrl}}" alt="{{post.title}}" />
-						<h3>{{post.title}}</h3>
-						<h4>{{post.language}}</h4>
-					</div>
-				</a>
-			</li>
-		{% endfor %}
-		</ul>
-	</div>
-	
-	<div class="floatClear"></div>
 	
 	<div id = "postContent">
 		{{ content }}

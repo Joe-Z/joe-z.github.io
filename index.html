@@ -1,47 +1,24 @@
 ---
 layout: default
-title: Home
+title: Projects
 ---
+<div class="floatClear"></div>
 
-<div id="index">
-	<div id="indexText">
-		<h2>About</h2>
-		<p>
-			My name is Franz J. Lanzendorfer. I'm a software engineer and consider myself a problem-solver. Currently I'm attending a master's programme at <a href="http://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. Before that I've been working as  Junior Software Developer at <a href="http://related-designs.com/">Related Designs</a> in Mainz, Germany.
-		</p>
-		<p>
-			On this site you can see some of the projects I created or took part in. I hope you like them.
-		</p>
-		<p>
-			If you have any questions or wish to contact me, 
-			you can do so via the channels given below.
-		</p>
-
-		<h2>Contact</h2>
-		<div class="contact">
-			E-Mail: <a href="mailto:franz.lanzendorfer@gmail.com">franz.lanzendorfer@gmail.com</a>
-		</div>
-		
-		<div class="contact">
-			Github: <a href="https://github.com/Joe-Z" target="_blank">github.com/Joe-Z</a>
-		</div>
-		
-		<div class="contact">
-			Twitter: <a href="https://twitter.com/#!/JoeZaph" target="_blank">@JoeZaph</a>
-		</div>
-		
-		<div class="contact">
-			LinkedIn: <a href="http://www.linkedin.com/in/franzlanzendorfer" target="_blank">/in/franzlanzendorfer</a>
-		</div>
-		
-		<div class="contact">
-			XING: <a href="https://www.xing.com/profile/FranzJ_Lanzendorfer?sc_o=mxb_p" target="_blank">/profile/FranzJ_Lanzendorfer</a>
-		</div>
-        
-	</div>
-	<div id="gravatar">
-		<img src="http://www.gravatar.com/avatar/6b8cab58c55eab88ccd0d8bf4ac61acc?size=200"
-		alt="gravatar" />
-	</div>
-	<div class="floatClear">&nbsp;</div>
+<div id = "previews">
+	<!-- preview-list -->
+	<ul>
+	{% for post in site.posts %}
+	    <li>
+			<a href="{{ post.url }}">
+				<div class="normalPreview">
+					<img src="{{post.previewImageUrl}}" alt="{{post.title}}" />
+					<h3>{{post.title}}</h3>
+					<h4>{{post.language}}</h4>
+				</div>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
 </div>
+
+<div class="floatClear"></div>
