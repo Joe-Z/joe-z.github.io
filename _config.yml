@@ -1,4 +1,4 @@
 markdown: rdiscount
-pygments: true
+highlighter: rouge
 server: true
 permalink: /:year/:title.html
